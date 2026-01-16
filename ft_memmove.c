@@ -3,95 +3,79 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitorres <aitorres@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: aitorres <aitorres@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:06:08 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/14 18:06:06 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/16 16:19:05 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdio.h>   // Para printf
+#include <string.h>  // Para memmove original
+#include <stddef.h>  // Para size_t
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 {
-	unsigned char	*temp;
-	unsigned char	*p;
-	size_t		i;
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
 
-	i = 0;
-	temp = (unsigned char *)src;
-	p = (unsigned char *)dest;
-
-	while(i < n)
+	if (!dest && !src)
+		return (NULL);
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	if (d < s)
 	{
-		p[i] = temp[i];
-		i++;
+		i = -1;
+		while (i++ < n)
+			d[i] = s[i];
 	}
-	return(0);
+	else if (d > s)
+	{
+		while (n > 0)
+		{
+			d[n - 1] = s[n - 1];
+			n--;
+		}
+	}
+	return (dest);
 }
 
-La función memmove() copia "n" bytes del área de memoria 'src' al área de memoria 'dest'. Las áreas de memoria pueden solaparse: la copia se realiza como si los bytes de 'src' se copiaran primero a una matriz temporal que no se solapa con 'src' ni 'dest', y luego se copiaran de la matriz temporal a 'dest'.
+// protección por si ambos son NULL
+//comprobamos que d sea mas pequeño que s, realmente que vaya antes ya que 'd' está recortado de s, su dirección de memoria será mas pequeña, entocnes is es menor o igual, entras
+//La función memmove() copia "n" bytes del área de memoria 'src' al área de memoria 'dest'. Las áreas de memoria pueden solaparse: la copia se realiza como si los bytes de 'src' se copiaran primero a una matriz temporal que no se solapa con 'src' ni 'dest', y luego se copiaran de la matriz temporal a 'dest'.
 
-
-#include <stdio.h>
-#include <string.h>
-
-int main()
+int main(void)
 {
-    char str1[] = "Hello, world!";
-    char str2[20];
+	// TEST 1: Solapamiento hacia la derecha (d > s)
+	char str1[] = "123456789";
+	char str2[] = "123456789";
+	
+	memmove(str1 + 2, str1, 7);
+	ft_memmove(str2 + 2, str2, 7);
+	
+	printf("TEST 1 (d > s):\n");
+	printf("Original: %s\n", str1);
+	printf("Tuya:     %s\n\n", str2);
 
-    ft_memmove(str2, str1, strlen(str1) + 1);
+	// TEST 2: Solapamiento hacia la izquierda (d < s)
+	char str3[] = "abcdefg";
+	char str4[] = "abcdefg";
+	
+	memmove(str3, str3 + 2, 3);
+	ft_memmove(str4, str4 + 2, 3);
+	
+	printf("TEST 2 (d < s):\n");
+	printf("Original: %s\n", str3);
+	printf("Tuya:     %s\n\n", str4);
 
-    printf("str1: %s\n", str1);
-    printf("str2: %s\n", str2);
+	// TEST 3: Caso NULL
+	printf("TEST 3 (NULL):\n");
+	void *res = ft_memmove(NULL, NULL, 5);
+	if (res == NULL)
+		printf("Resultado: NULL (Correcto)\n");
+	else
+		printf("Resultado: No es NULL (Revisar)\n");
 
-    return 0;
-}
-
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memmove(void *dest, const void *src, size_t n)
-{
-    int i;
-    unsigned char *d;
-    unsigned char *s;
-
-    i = 0;
-    d = (unsigned char *)dest;
-    s = (unsigned char *) src;
-    
-    if (d > s)
-    {       
-        while (n--> 0)
-            {
-                d[n] = s[n];
-
-            }
-    }
-    else
-    {
-      while(i < n)
-      {
-        d[i] = s[i];
-        i++;
-        
-      }
-    }
-    return(dest);
-}
-
-
-int main()
-{
-    char str1[] = "Hello, world!";
-    char str2[] = "H!!";
-
-    ft_memmove(str2, str1, 5);
-
-    printf("str1: %s\n", str1);
-    printf("str2: %s\n", str2);
-
-    return 0;
+	return (0);
 }
