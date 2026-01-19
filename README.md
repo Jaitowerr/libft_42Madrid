@@ -2,9 +2,15 @@
 
 # Descripción
 `libft` es una biblioteca en lenguaje C cuyo objetivo es recrear una colección de funciones y otras utilidades básicas del lenguaje.
-El propósito del proyecto es profundizar en el manejo de memoria, punteros, arrays, conversión de tipos, y comprensión de funciones fundamentales del ecosistema C.
+Este proyecto sirve como base para todos los futuros proyectos de 42, permitiendo trabajar con funciones propias, totalmente implementadas, entendiendo en profundidad:
 
-Esta librería sirve como base para futuros proyectos de 42, permitiendo utilizar funciones propias implementadas desde cero.
+* Manejo de memoria
+* Conversión de tipos
+* Manipulación de cadenas
+* Punteros
+* Implementación de funciones de bajo nivel
+
+La librería generada es libft.a, que puede enlazarse en cualquier proyecto en C.
 
 ## Lista de funcciones
 
@@ -35,7 +41,19 @@ Funciones de clasificación de caracteres    | Funciones de manipulación de mem
 [ft_tolower](#ft_tolower)	                  |                                             |
 [ft_tolower](#ft_tolower)	                  |                                             |
 
+## Si quieres saber que realiza cada función, que parámetros utiliza cada una, pincha aquí o desliza a la zona inferior.
+
+<br>
+
 # Instrucciones
+
+Una sección de "Instrucciones"que contenga cualquier información relevante sobre
+compilación, instalación y/o ejecución.
+
+
+
+
+
 
 ## Compilación
 ```
@@ -90,9 +108,26 @@ Funciones de clasificación de caracteres    | Funciones de manipulación de mem
 
 
 # Recursos
+
+ Una sección de "Recursos"que enumere referencias clásicas relacionadas con el
+tema (documentación, artículos, tutoriales, etc.), así como una descripción del uso
+de IA, especificando para qué tareas y en qué partes del proyecto se ha utilizado.
+
+
 Manual POSIX
 ASCII Table
 cplusplus reference
 
 # Uso de IA
+* Este readme está en desarrollo, 19/enero/2026
 
+# Descripción de la librería, función por función:
+
+## [ft_isalpha](/ft_isalpha.c) 
+### [ft_isalpha](/ft_isalpha.c) 
+
+`int        ft_isalpha(int c)` <br>
+:-----------:
+Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es.
+  Da igual mayúsculas que minúsculas. Puede recibir un char porque lo transforma a int según la tabla Ascii. |
+    <p>prueba de etique, a ver si es igual que html</p>
