@@ -23,6 +23,7 @@ Funciones de clasificación de caracteres    | Funciones de manipulación de mem
 
 ---
 
+| PARTE 2 | 
 Funciones de clasificación de caracteres    | Funciones de manipulación de memoria        | 
 :-----------:                               | :-----------:                               | 
 [ft_isalpha](#ft_isalpha)		                |[ft_memset](#ft_memset)                      | 
