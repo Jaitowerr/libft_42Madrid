@@ -1,5 +1,7 @@
 *Este proyecto ha sido creado como parte del currículo de 42 por '<'aitorres>'*
 
+<br>* Este readme está en desarrollo, 19/enero/2026<br>
+
 # Descripción
 `libft` es una biblioteca en lenguaje C cuyo objetivo es recrear una colección de funciones y otras utilidades básicas del lenguaje.
 Este proyecto sirve como base para todos los futuros proyectos de 42, permitiendo trabajar con funciones propias, totalmente implementadas, entendiendo en profundidad:
@@ -119,15 +121,15 @@ ASCII Table
 cplusplus reference
 
 # Uso de IA
-* Este readme está en desarrollo, 19/enero/2026
+
 
 # Descripción de la librería, función por función:
 
-## [ft_isalpha](/ft_isalpha.c) 
 ### [ft_isalpha](/ft_isalpha.c) 
-
-`int        ft_isalpha(int c)` <br>
-:-----------:
-Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es.
-  Da igual mayúsculas que minúsculas. Puede recibir un char porque lo transforma a int según la tabla Ascii. |
-    <p>prueba de etique, a ver si es igual que html</p>
+    int        ft_isalpha(int c)
+Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es. <br>
+Da igual mayúsculas que minúsculas. <br>
+Puede recibir un char porque lo transforma a int según la tabla ASCII. <br>
+  
+    <p>prueba de etiqueta, a ver si es igual que html</p>
+<p>prueba de etiqueta, a ver si es igual que html</p>
