@@ -67,3 +67,5 @@ int main()
 	
 	return (0);
 }
+
+//  gcc -Wall -Wextra -Werror ft_memset.c -o test_memset && ./test_memset

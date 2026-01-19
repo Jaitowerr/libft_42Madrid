@@ -57,7 +57,7 @@ ft_strlcpy      size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
     dstsize SIEMPRE tiene que ser el tamaño real del array dst. ¿Qué pasa si miento en dstsize? -->	Buffer overflow. Segfault.
     ¿Qué devuelve strlcpy?	Siempre el largo de src.
 
-ft_strlcat      size_t strlcat(char dest), const char *restrict src, size_t destsize);
+ft_strlcat      size_t strlcat(char dest, const char *restrict src, size_t destsize);
     Pega la cadena src al final de la cadena dst, asegurándose de no pasarse del tamaño total dstsize y de que el resultado siempre termine en un nulo (\0).
     Devuelve la longitud teórica de la frase que intentaste crear: la suma de la longitud inicial de dst más la longitud de src.
         dest = Es una caja que ya tiene algo dentro.    dst[10] = "Hola";
@@ -98,7 +98,30 @@ ft_memcmp       int memcmp(const void *s1, const void *s2, size_t n)
 	Tiene que recorrer s1 y s2 hasta 'n'
 	Devuelve -1 si la resta es negativa, 0 si es igual todo, y 1 si es positivo.
 
+ft_strnstr		char	*ft_strnstr(const char *big, const char *little, size_t len)
+	 Es un buscador, busca dentro de big la primera aparición de una subcadena (little), pero limitando la búsqueda a un número máximo de caracteres (n) ?
+	 si little está vacía, devuelve big.
+	 Si little está despues de 'len' en 'Big', pilla a medias de la posicion 'len' o no se completa devuelve NULL.
+	 Si no se encuentra little, devuelve 'NULL'.
 
+ft_atoi			int	atoi(const char *nptr)
+	Esta es una función de C que convierte una representación de cadena de un número entero 'char' en un valor entero 'int'.
+	los espacios = 32 o del 9 al 13 includo, avanza, si tiene un signo, uno solo ó '+' ó '-' se guarda con 1 o -1.
+	Se convierte de char a int, si hay letrs u otras cosas despues de los números se ignora y se para.
+	No se mira desbordamiento del número máximo, se trabaja con un int.
+
+ft_calloc		void *calloc(size_t nmemb, size_t size);
+	ft_calloc busca crear memoria para el tipo de dato, para ello utiliza malloc, calcula el numero de datos por el tipo, un char, ocupa un byte, 1 direccion de memoria, un int ocupa 4 bytes, 4 direcciones de memoria.
+	Despues de calcular, el espacio, lo crea, y lo rellena de 0 con ft_bzero.
+	Una vez asignada la memoria retorna, devuelve la direccióon del primer puntero.
+
+ft_strdup		char *ft_strdup(const char *s);
+	Crea un duplicado de *s.
+	Si luego modificamos nuestro nueva copia, veriamos como solo se modifica lo nuevo y no *s.
+
+ft_substr		char	*ft_substr(char const *s, unsigned int start, size_t len);
+	Reserva memoria (con malloc(3)) y devuelve una subcadena de caracteres de la cadena ‘s’. La subcadena comienza en el índice ‘start ’ y tiene una longitud máxima ‘len ’.
+	La subcadena de caracteres resultante. NULL si falla la reserva de memoria.
 
 
 

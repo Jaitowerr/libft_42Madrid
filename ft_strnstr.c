@@ -6,22 +6,81 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:41:32 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/16 19:15:33 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/19 15:04:00 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*strnstr(const char *big, const char *little, size_t len)
+size_t	ft_strlen(const char *string)
 {
-	
+	size_t	length;
+
+	length = 0;
+	while (string[length] != '\0')
+		length++;
+	return (length);
+}
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	len_little;
+	size_t	i;
+	size_t	n;
+
+	len_little = ft_strlen(little);
+	i = 0;
+	if (little[i] == '\0')
+		return ((char *) big);
+	if (len_little > len)
+		return (NULL);
+	while (big[i] != '\0' && i < len)
+	{
+		n = 0;
+		while (big[i + n] == little[n] && (i + n) < len)
+		{
+			if (little[n + 1] == '\0')
+				return ((char *) &big[i]);
+			n++;
+		}
+		i++;
+	}
+	return (NULL);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+void	test(const char *big, const char *little, size_t len)
+{
+//	char *orig;
+	char *mine;
+
+	/*orig = strnstr(big, little, len);*/
+	mine = ft_strnstr(big, little, len);
+
+	printf("BIG: \"%s\"\n", big);
+	printf("LITTLE: \"%s\"\n", little);
+	printf("LEN: %zu\n", len);
+
+//	printf("strnstr     : %s\n", orig ? orig : "NULL");
+	printf("ft_strnstr  : %s\n", mine ? mine : "NULL");
+	printf("-----------------------------\n");
 }
 
 int	main(void)
 {
-	const char *largestring = "Foo Bar Baz";
-	const char *smallstring = "Bar";
-	char *ptr;
+	test("Foo Bar Baz", "Bar", 4);
+	test("Foo Bar Baz", "Bar", 7);
+	test("Foo Bar Baz", "Baz", 11);
+	test("Foo Bar Baz", "", 5);
+	test("Foo Bar Baz", "Bar", 20);
+	test("Foo Bar Baz", "Qux", 20);
+	test("Foo Bar Baz", "o", 20);
+	test("Foo Bar Baz", " ", 20);
 
-	ptr = strnstr(largestring, smallstring, 4);
+	return (0);
 }
+
+
+//  gcc -Wall -Wextra -Werror ft_strnstr.c -o test_strnstr && ./test_strnstr

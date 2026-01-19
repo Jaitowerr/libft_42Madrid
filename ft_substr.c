@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 15:51:22 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/19 13:37:35 by aitorres         ###   ########.fr       */
+/*   Created: 2026/01/19 17:47:00 by aitorres          #+#    #+#             */
+/*   Updated: 2026/01/19 17:48:55 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int ascii)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if ((ascii >= '0' && ascii <= '9') || (ascii >= 'A' && ascii <= 'Z') || (ascii >= 'a' && ascii <= 'z'))
-		return (1);
-	else
-		return (0);
+	
 }
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%i", ft_isalnum('5'));
-    printf("%i", ft_isalnum('g'));
-    printf("%i", ft_isalnum('H'));
-    printf("%i", ft_isalnum(5));
-    printf("%i", ft_isalnum('+'));
-	return (0);
-}
-
