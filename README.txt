@@ -124,6 +124,50 @@ ft_substr		char	*ft_substr(char const *s, unsigned int start, size_t len);
 	La subcadena de caracteres resultante. NULL si falla la reserva de memoria.
 
 
+test2
+
+ft_substr       char *ft_substr(char const *s, unsigned int start, size_t len);
+    s: La cadena original desde la que se crea la subcadena.
+    start: El índice del carácter en ‘s’ desde el que empieza la subcadena.
+    len: La longitud máxima de la subcadena.
+    Crea una copia (con malloc) de un fragmento de la cadena s. Empieza en la posición start y copia como máximo len caracteres.
+        Si start es mayor que el largo de s, devuelve una cadena vacía ("") con malloc.
+        Si len es más grande que lo que queda de cadena desde start, se recorta para no leer memoria fuera de s.
+        Retorno: La nueva subcadena terminada en \0 o NULL si falla el malloc.
+
+
+ft_strjoin      char *ft_strjoin(char const *s1, char const *s2);
+    Reserva memoria y devuelve una nueva cadena formada por la concatenación de s1 y s2.
+    Mide el largo de ambas cadenas, reserva len(s1) + len(s2) + 1 bytes, copia s1, luego s2, y añade el \0 final.
+    Las cadenas originales no se modifican. Es responsabilidad del usuario liberar la memoria devuelta.
+    Retorno: Puntero a la nueva cadena o NULL si malloc falla.
+
+
+ft_strtrim      char *ft_strtrim(char const *s1, char const *set);
+    Elimina todos los caracteres de la cadena set desde el principio y el final de s1.
+    Devuelve una nueva cadena (con malloc) con los caracteres indeseados recortados.
+    Busca el primer carácter de s1 que no esté en set (inicio), luego busca el último carácter de s1 que no esté en set (final), y copia solo esa porción en una nueva cadena y la devuelve.
+    Si s1 está completamente formada por caracteres de set, devuelve una cadena vacía ("").
+    Retorno: La nueva cadena recortada terminada en \0, o NULL si falla la reserva de memoria.
+
+ft_split        char **ft_split(char const *s, char c);
+        Un char * es un puntero a una cadena (un array de caracteres).
+        Un char ** es un puntero a un array de punteros a cadenas. Es decir, un array de strings es un char **
+    Recibe una cadena s y un carácter delimitador c.
+    Divide la cadena s en subcadenas separadas por el carácter c.
+    Devuelve un array de punteros a cadenas (cada puntero apunta a una subcadena).
+    El array termina con un puntero NULL para indicar el final.
+        Cuenta cuántas subcadenas.
+        Reserva memoria para el array de punteros (tamaño = número de subcadenas + 1 para el NULL).
+        Si falla alguna reserva, libera todo lo reservado hasta ese momento
+        Devuelve el array con todas las subcadenas y un NULL al final .
+
+ft_itoa     char *ft_itoa(int n);
+
+
+
+
+
 
 
 
