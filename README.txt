@@ -174,10 +174,25 @@ ft_striteri		void ft_striteri(char *s, void (*f)(unsigned int, char*));
 	muy parecido a strmapi, pero en este caso en vez de enviar el char, y agregarlo a una segunda cadena lo modifiquemos o no, en este caso enviamos la direccion de &s[i] iteramos directamente sobre la cadena y la modificamos directamente, no retornamos nada. 
 
 ft_putchar_fd		void ft_putchar_fd(char c, int fd);
+	ESta funcion imprime un write, de 1 byte.
+	write(fd, &c, 1);
+	fd = (file descriptor ) :
+		0	STDIN_FILENO	Standard Input	Lo que escribes con el teclado (ej. scanf).
+		1	STDOUT_FILENO	Standard Output	Lo que ves en la pantalla (ej. printf).
+		2	STDERR_FILENO	Standard Error	Los mensajes de error (también salen en pantalla, pero por otro "tubo").
+	&c = la dirección de c. El manual de instrucciones dice que el segundo parámetro debe ser una dirección de memoria (un puntero).
+	1 = imprimimos 1byte en este caso, sería el numero de bytes a imprimir
+	Entonces, en 1 stdout lo que sería fd, le decimos ve a la dirección &c y llévate solo el primer bloque que encuentres.
+
+ft_putstr_fd		void ft_putstr_fd(char *s, int fd);
+	recorre el largo de cadena e impre la cadena entera en con write en vez de un caracter. REcibe el fd, el puntero, y el número de bytes.
+
+ft_putendl_fd.c		void ft_putendl_fd(char *s, int fd)
+	recorre el largo de cadena e impre la cadena entera en con write en vez de un caracter. REcibe el fd, el puntero, y el número de bytes. Añade un salto de línea al final de frase
 
 
-
-
+ft_putnbr_fd		void ft_putnbr_fd(int n, int fd);
+	imprimir numeros negativos y positivos con el write. Utiliza putchar para imprimir caracteres. Retroalimentación de la función.
 
 gcc -Wall -Wextra -Werror ft_xxxx.c -o test_xxxx && ./test_xxxx
 
@@ -267,6 +282,7 @@ Tipos de ancho fijo (uint8_t, int16_t, etc.)
 
 const void *src:
     Seguridad: Si por error intentas hacer src[i] = 'A'; dentro de tu función, el compilador te dará un error y te dirá: "Oye, dijiste que esto era constante, no puedes cambiarlo". Esto evita bugs accidentales.
+
 
 
 
