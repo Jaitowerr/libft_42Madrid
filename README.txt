@@ -163,9 +163,17 @@ ft_split        char **ft_split(char const *s, char c);
         Devuelve el array con todas las subcadenas y un NULL al final .
 
 ft_itoa     char *ft_itoa(int n);
+	Recibe un int. La función gestiona conbertir de int a char reservando memoria para el char. Para poder manejar extremos de un int, es decir sus limitaciones, cremoas una variable para transformarla de int a long. Creamso con malloc el tamaño del puntero y guardamos numero por número.
+Retorna un char *.
 
+ft_strmapi		char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+	strmapi gestiona una función dentro de otra función. y devulve un nuevo puntero.Aplica la función ‘f’ a cada carácter de la cadena ‘s’, pasando su índice como primer argumento y el propio carácter como segundo argumento. Se crea una nueva cadena (utilizando malloc(3)) para almacenar los resultados de las sucesivas aplicaciones de ‘f’.
+Debe devolver el puntero creado.
 
+ft_striteri		void ft_striteri(char *s, void (*f)(unsigned int, char*));
+	muy parecido a strmapi, pero en este caso en vez de enviar el char, y agregarlo a una segunda cadena lo modifiquemos o no, en este caso enviamos la direccion de &s[i] iteramos directamente sobre la cadena y la modificamos directamente, no retornamos nada. 
 
+ft_putchar_fd		void ft_putchar_fd(char c, int fd);
 
 
 
@@ -259,6 +267,7 @@ Tipos de ancho fijo (uint8_t, int16_t, etc.)
 
 const void *src:
     Seguridad: Si por error intentas hacer src[i] = 'A'; dentro de tu función, el compilador te dará un error y te dirá: "Oye, dijiste que esto era constante, no puedes cambiarlo". Esto evita bugs accidentales.
+
 
 
 
