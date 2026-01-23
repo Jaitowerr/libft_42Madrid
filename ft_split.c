@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 12:18:30 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/21 20:07:30 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/22 16:07:37 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-static size_t count_string(const char *s, char c)
+static	size_t	count_string(const char *s, char c)
 {
-	size_t count;
-	size_t i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	i = 0;
@@ -30,18 +30,18 @@ static size_t count_string(const char *s, char c)
 	return (count);
 }
 
-static size_t return_i(const char *s, char c, size_t i)
+static size_t	return_i(const char *s, char c, size_t i)
 {
 	while (s[i] != '\0' && s[i] != c)
 		i++;
 	return (i);
 }
 
-static char **reservar_memoria_arrays(char **ptr2, const char *s, char c, size_t i_array)
+static	char	**res_memory(char **ptr2, const char *s, char c, size_t i_array)
 {
-	size_t j;
-	size_t i;
-	size_t inicio;
+	size_t		j;
+	size_t		i;
+	size_t		inicio;
 
 	j = 0;
 	i = 0;
@@ -63,15 +63,14 @@ static char **reservar_memoria_arrays(char **ptr2, const char *s, char c, size_t
 	}
 	return (ptr2);
 }
-static void asignar_datos_arrays(char **ptr2, const char *s, char c, size_t i_array)
+static	void	date_array(char **ptr2, const char *s, char c, size_t i_array)
 {
-	size_t j;
-	size_t i;
-	size_t i2;
+	size_t	j;
+	size_t	i;
+	size_t	i2;
 
 	i = 0;
 	j = 0;
-
 	while (s[i] && j < i_array)
 	{
 		i2 = 0;
@@ -89,10 +88,10 @@ static void asignar_datos_arrays(char **ptr2, const char *s, char c, size_t i_ar
 	ptr2[i_array] = NULL;
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **ptr2;
-	size_t i_array;
+	char	**ptr2;
+	size_t	i_array;
 
 	if (!s)
 		return (NULL);
@@ -100,15 +99,11 @@ char **ft_split(char const *s, char c)
 	ptr2 = malloc(sizeof(char *) * (i_array + 1));
 	if (!ptr2)
 		return (NULL);
-
-	if (!reservar_memoria_arrays(ptr2, s, c, i_array))
+	if (!res_memory(ptr2, s, c, i_array))
 		return (NULL);
-
-	asignar_datos_arrays(ptr2, s, c, i_array);
-
+	date_array(ptr2, s, c, i_array);
 	return (ptr2);
 }
-
 
 int main(void)
 {

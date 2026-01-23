@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 15:51:22 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/22 16:00:49 by aitorres         ###   ########.fr       */
+/*   Created: 2026/01/23 17:59:26 by aitorres          #+#    #+#             */
+/*   Updated: 2026/01/23 18:29:34 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int ascii)
-{
-	if ((ascii >= '0' && ascii <= '9'))
-		return (1);
-	else if ((ascii >= 'A' && ascii <= 'Z') || (ascii >= 'a' && ascii <= 'z'))
-		return (1);
-	else
-		return (0);
-}
+#include <unistd.h>
 
-#include <stdio.h>
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
 
 int	main(void)
 {
-	printf("%i", ft_isalnum('5'));
-	printf("%i", ft_isalnum('g'));
-	printf("%i", ft_isalnum('H'));
-	printf("%i", ft_isalnum(5));
-	printf("%i", ft_isalnum('+'));
-	return (0);
+    // Escribimos una 'A'
+    ft_putchar_fd('A', 1);
+    ft_putchar_fd('\n', 1);
+    // Escribimos una 'E' en la salida de errores
+    ft_putchar_fd('E', 2);
+    ft_putchar_fd('\n', 2);
+
+    return (0);
 }
+
+// cc -Wall -Wextra -Werror ft_putchar_fd.c -o test_ft_putchar_fd && ./test_ft_putchar_fd
