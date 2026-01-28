@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *string)
+static size_t	ft_strlen_local(const char *string)
 {
 	size_t	length;
 
@@ -24,7 +22,7 @@ size_t	ft_strlen(const char *string)
 	return (length);
 }
 
-char	*ft_strrchr(const char *s, int c)
+static char	*ft_strrchr_local(const char *s, int c)
 {
 	int	i;
 
@@ -47,12 +45,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	ini;
 	int		i;
 
-	fin = ft_strlen(s1) - 1;
+	fin = ft_strlen_local(s1) - 1;
 	ini = 0;
 	i = 0;
-	while (s1[ini] && ft_strrchr(set, s1[ini]) != NULL)
+	while (s1[ini] && ft_strrchr_local(set, s1[ini]) != NULL)
 		ini++;
-	while (s1[fin] && ft_strrchr(set, s1[fin]) != NULL)
+	while (s1[fin] && ft_strrchr_local(set, s1[fin]) != NULL)
 		fin--;
 	if (fin - ini > 0)
 		i = fin - ini + 1;
@@ -64,7 +62,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s2[i] = s1[fin--];
 	return (s2);
 }
-
+/*
 int main(void)
 {
 	char *result;
@@ -103,6 +101,7 @@ int main(void)
 }
 
 //gcc -Wall -Wextra -Werror ft_strtrim.c -o test_strtrim && ./test_strtrim
+*/
 
 
 

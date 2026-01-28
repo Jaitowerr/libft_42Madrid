@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_bzero(void	*ptr, size_t	len)
 {
 	size_t			i;
@@ -23,7 +25,7 @@ void	ft_bzero(void	*ptr, size_t	len)
 		i++;
 	}
 }
-
+/*
 #include <stddef.h>     //para size_t
 #include <stdio.h>      //para print_f
 
@@ -48,3 +50,5 @@ int main(void)
 	return (0);
 }
 //p = (unsigned char *)ptr;	//Casteo
+
+*/

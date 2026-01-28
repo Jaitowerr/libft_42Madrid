@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>   // Para printf
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -35,7 +34,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (a[i] - b[i]);
 	return (0);
 }
-
+/*
 int main(void)
 {
 	int r1;
@@ -96,3 +95,4 @@ int main(void)
 
 
 //  gcc -Wall -Wextra -Werror ft_strncmp.c -o test_strncmp && ./test_strncmp
+*/

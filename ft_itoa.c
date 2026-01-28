@@ -10,12 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
+#include "libft.h"
 
-int	size_word(long numb)
+static int	size_word(long numb)
 {
 	int	size;
 
@@ -30,7 +27,7 @@ int	size_word(long numb)
 	return (size);
 }
 
-void	malloc_word_and_null(int size, char *word, int sig, long numb)
+static void	malloc_word_and_null(int size, char *word, int sig, long numb)
 {
 	int	i;
 
@@ -72,10 +69,7 @@ char *ft_itoa(int n)
 	return (word);
 }
 
-
-
-
-
+/*
 int main(void)
 {
 	char *result;
@@ -115,3 +109,4 @@ int main(void)
 }
 
 // cc -Wall -Wextra -Werror ft_itoa.c -o test_itoa && ./test_itoa
+*/

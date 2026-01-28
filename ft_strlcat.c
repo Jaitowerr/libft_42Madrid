@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>   // Para printf
-#include <string.h>
-#include <stddef.h>  // Para size_t
+#include "libft.h"
 
 size_t	ft_strlcat(char	*dest, const char *src, size_t destsize)
 {
@@ -37,7 +35,7 @@ size_t	ft_strlcat(char	*dest, const char *src, size_t destsize)
 	dest[d_len + i] = '\0';
 	return (d_len + s_len);
 }
-
+/*
 //medimos lago de dest hasta el nulo, o mientras no lleguemos al tamñao de destsize
 //medimos src el largo
 //comprobamos si d_len es igual que destsize entonces devolvemos el destsize + el s_len, lo debería haber sido. Es responsabilidad del rpogramaod el destsize
@@ -77,5 +75,4 @@ int main(void)
 
 
 //gcc -Wall -Wextra -Werror ft_strlcat.c -o test_strlcat && ./test_strlcat
-
-
+*/

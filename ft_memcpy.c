@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	const unsigned char	*s;
@@ -26,7 +28,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
+/*
 #include <stddef.h>     //para size_t
 #include <stdio.h>      //para print_f
 #include <string.h> // para memcpy original
@@ -45,3 +47,4 @@ int main(void)
 	
 	return (0);
 }
+	*/

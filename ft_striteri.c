@@ -6,11 +6,11 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 17:21:55 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/23 17:58:57 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:45:46 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 /*
 void	mi_funcion_magica(unsigned int i, char *c)
 {
@@ -32,7 +32,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -49,3 +49,4 @@ int	main(void)
 }
 
 // cc -Wall -Wextra -Werror ft_striteri.c -o test_striteri && ./test_striteri
+*/

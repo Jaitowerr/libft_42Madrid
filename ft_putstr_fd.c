@@ -6,13 +6,13 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 18:25:59 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/23 18:48:45 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:57:30 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *string)
+static size_t	ft_strlen_local(const char *string)
 {
 	size_t	length;
 
@@ -26,10 +26,10 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	i = ft_strlen(s);
+	i = ft_strlen_local(s);
 	write(fd, s, i);
 }
-
+/*
 int	main(void)
 {
     char *mensaje = "Hola, esto es una prueba de ft_putstr_fd\n";
@@ -41,4 +41,5 @@ int	main(void)
     return (0);
 }
 
-// cc -Wall -Wextra -Werror ft_putstr_fd.c -o test_ft_putstr_fd && ./test_ft_putstr_fd
+// gcc -Wall -Wextra -Werror ft_putstr_fd.c -o test_ft_putstr_fd && ./test_ft_putstr_fd
+*/

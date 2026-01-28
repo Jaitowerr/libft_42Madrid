@@ -6,13 +6,13 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:41:32 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/19 15:04:00 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:59:49 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *string)
+static size_t	ft_strlen_local(const char *string)
 {
 	size_t	length;
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	n;
 
-	len_little = ft_strlen(little);
+	len_little = ft_strlen_local(little);
 	i = 0;
 	if (little[i] == '\0')
 		return ((char *) big);
@@ -47,7 +47,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -56,7 +56,7 @@ void	test(const char *big, const char *little, size_t len)
 //	char *orig;
 	char *mine;
 
-	/*orig = strnstr(big, little, len);*/
+	//orig = strnstr(big, little, len);
 	mine = ft_strnstr(big, little, len);
 
 	printf("BIG: \"%s\"\n", big);
@@ -84,3 +84,4 @@ int	main(void)
 
 
 //  gcc -Wall -Wextra -Werror ft_strnstr.c -o test_strnstr && ./test_strnstr
+*/

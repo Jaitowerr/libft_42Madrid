@@ -6,14 +6,13 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:23:22 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/19 17:07:44 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 14:00:37 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h> 
+#include "libft.h"
 
-void	ft_bzero(void	*ptr, size_t	len)
+static void	ft_bzero_local(void	*ptr, size_t	len)
 {
 	size_t			i;
 	unsigned char	*p;
@@ -34,10 +33,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, nmemb * size);
+	ft_bzero_local(ptr, nmemb * size);
 	return (ptr);
 }
-
+/*
 int main(void)
 {
     // Vamos a reservar 3 enteros
@@ -71,3 +70,4 @@ int main(void)
 
 
 //  gcc -Wall -Wextra -Werror ft_calloc.c -o test_calloc && ./test_calloc
+*/

@@ -3,32 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitorres <aitorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 16:06:08 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/16 16:19:05 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:42:57 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>   // Para printf
-#include <string.h>  // Para memmove original
-#include <stddef.h>  // Para size_t
+#include "libft.h"
 
 void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 	size_t			i;
-
+	
 	if (!dest && !src)
-		return (NULL);
+	return (NULL);
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
 	if (d < s)
 	{
 		i = -1;
 		while (i++ < n)
-			d[i] = s[i];
+		d[i] = s[i];
 	}
 	else if (d > s)
 	{
@@ -40,7 +38,10 @@ void	*ft_memmove(void	*dest, const void	*src, size_t	n)
 	}
 	return (dest);
 }
-
+/*
+#include <stdio.h>   // Para printf
+#include <string.h>  // Para memmove original
+#include <stddef.h>  // Para size_t
 // protección por si ambos son NULL
 //comprobamos que d sea mas pequeño que s, realmente que vaya antes ya que 'd' está recortado de s, su dirección de memoria será mas pequeña, entocnes is es menor o igual, entras
 //La función memmove() copia "n" bytes del área de memoria 'src' al área de memoria 'dest'. Las áreas de memoria pueden solaparse: la copia se realiza como si los bytes de 'src' se copiaran primero a una matriz temporal que no se solapa con 'src' ni 'dest', y luego se copiaran de la matriz temporal a 'dest'.
@@ -79,3 +80,4 @@ int main(void)
 
 	return (0);
 }
+	*/

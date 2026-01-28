@@ -9,6 +9,7 @@
 /*   Updated: 2026/01/16 15:32:12 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
@@ -16,7 +17,7 @@ int	ft_tolower(int c)
 		return (c + 32);
 	return (c);
 }
-
+/*
 #include <stdio.h>
 
 int ft_tolower(int c);
@@ -34,3 +35,4 @@ int main(void)
 }
 
 //  gcc -Wall -Wextra -Werror ft_tolower.c -o test_tolower && ./test_tolower
+*/

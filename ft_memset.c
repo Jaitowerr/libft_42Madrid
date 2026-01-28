@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *ptr, int x, size_t len)
 {
@@ -27,7 +27,7 @@ void	*ft_memset(void *ptr, int x, size_t len)
 	return (ptr);
 }
 
-
+/*
 //Hacemos esa conversión (llamada casting) por una razón fundamental: void * no se puede usar para trabajar, así forzamos la conversión de este puntero a este tipo específico, no sirve solo con especificarlo en p, hay que hacerlo en ambos.
 #include <stdio.h>
 
@@ -69,3 +69,4 @@ int main()
 }
 
 //  gcc -Wall -Wextra -Werror ft_memset.c -o test_memset && ./test_memset
+*/

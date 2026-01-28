@@ -6,15 +6,13 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:47:00 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/21 00:35:55 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 14:00:21 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *string)
+static size_t	ft_strlen_local(const char *string)
 {
 	size_t	length;
 
@@ -30,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     size_t  s_len;
     size_t  i;
 
-    s_len = ft_strlen(s);
+    s_len = ft_strlen_local(s);
     if (start >= s_len)
     {
         str = malloc(sizeof(char) * 1);
@@ -51,7 +49,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     return (str);
 }
 
-
+/*
 
 int main(void)
 {
@@ -89,3 +87,4 @@ int main(void)
 
     return (0);
 }
+    */

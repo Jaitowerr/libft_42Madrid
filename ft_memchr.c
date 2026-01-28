@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aitorres <aitorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 16:27:15 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/16 16:46:16 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:41:21 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -29,8 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-#include <stdio.h>   // Para printf
-
+/*
 int main(void)
 {
 	const char *str = "Hola mundo";
@@ -61,3 +60,4 @@ int main(void)
 }
 
 //gcc -Wall -Wextra -Werror ft_memchr.c -o test_memchr && ./test_memchr
+*/

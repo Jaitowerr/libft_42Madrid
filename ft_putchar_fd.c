@@ -6,17 +6,17 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 17:59:26 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/23 18:29:34 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:43:24 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
+/*
 int	main(void)
 {
     // Escribimos una 'A'
@@ -30,3 +30,4 @@ int	main(void)
 }
 
 // cc -Wall -Wextra -Werror ft_putchar_fd.c -o test_ft_putchar_fd && ./test_ft_putchar_fd
+*/

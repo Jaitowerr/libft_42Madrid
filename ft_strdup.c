@@ -6,15 +6,13 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 17:12:55 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/19 17:43:34 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 15:52:32 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>  // Para strdup
+#include "libft.h"
 
-size_t	ft_strlen(const char *string)
+static size_t	ft_strlen_local(const char *string)
 {
 	size_t	length;
 
@@ -29,7 +27,7 @@ char	*ft_strdup(const char *s)
 	char	*ptr;
 	size_t	i;
 
-	ptr = malloc(ft_strlen(s) + 1 * sizeof(char));
+	ptr = malloc(ft_strlen_local(s) + 1 * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	i = 0;
@@ -41,7 +39,7 @@ char	*ft_strdup(const char *s)
 	ptr[i] = '\0';
 	return (ptr);
 }
-
+/*
 int main(void)
 {
     const char *original = "Hola Mundo";
@@ -70,7 +68,8 @@ int main(void)
     //free(std_copy);
     free(my_copy);
 
-    return 0;
+    return (0);
 }
 
 //  gcc -Wall -Wextra -Werror ft_strdup.c -o test_strdup && ./test_strdup
+*/

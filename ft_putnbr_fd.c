@@ -6,13 +6,13 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 18:59:41 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/23 19:26:20 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:57:20 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd_local(char c, int fd)
 {
 	write(fd, &c, 1);
 }
@@ -24,16 +24,19 @@ void	ft_putnbr_fd(int n, int fd)
 	numb = n;
 	if (numb < 0)
 	{
-		ft_putchar_fd('-', fd);
+		ft_putchar_fd_local('-', fd);
 		numb = -numb;
 	}
 	if (numb > 9)
 		ft_putnbr_fd((numb / 10), fd);
-	ft_putchar_fd((numb % 10) + '0', fd);
+	ft_putchar_fd_local((numb % 10) + '0', fd);
 }
-
+/*
 #include <unistd.h>
 #include <limits.h>
+
+void	ft_putchar_fd_local(char c, int fd);
+void	ft_putchar_fd_local(char c, int fd);
 
 int main(void)
 {
@@ -70,4 +73,5 @@ int main(void)
 	return (0);
 }
 
-// cc -Wall -Wextra -Werror ft_putnbr_fd.c -o test_ft_putnbr_fd && ./test_ft_putnbr_fd
+// gcc -Wall -Wextra -Werror ft_putnbr_fd.c -o test_ft_putnbr_fd && ./test_ft_putnbr_fd
+*/

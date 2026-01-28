@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp-REVISAR.c                                :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 17:11:42 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/16 19:08:46 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:42:18 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -36,7 +36,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-//	return (ss1[i] - ss2[i]);
+/*
 #include <stdio.h>   // Para printf
 
 int main(void)
@@ -99,3 +99,5 @@ int main(void)
 
 
 //  gcc -Wall -Wextra -Werror ft_memcmp-REVISAR.c -o test_memcmp && ./test_memcmp
+
+*/

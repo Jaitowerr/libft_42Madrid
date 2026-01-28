@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *string)
+static size_t	ft_strlen_local(const char *string)
 {
 	size_t	length;
 
@@ -31,8 +29,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i2;
 	size_t	i3;
 
-	i1 = ft_strlen(s1);
-	i2 = ft_strlen(s2);
+	i1 = ft_strlen_local(s1);
+	i2 = ft_strlen_local(s2);
 	s3 = malloc(sizeof(char) *(i1 + i2 + 1));
 	if (!s3)
 		return (NULL);
@@ -46,7 +44,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s3[i3] = '\0';
 	return (s3);
 }
-
+/*
 int main(void)
 {
 	char *result;
@@ -71,7 +69,4 @@ int main(void)
 }
 
 // gcc -Wall -Wextra -Werror ft_strjoin.c -o test_strjoin && ./test_strjoin
-
-
-
-
+*/

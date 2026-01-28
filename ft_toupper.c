@@ -9,6 +9,7 @@
 /*   Updated: 2026/01/16 15:31:54 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -16,7 +17,7 @@ int	ft_toupper(int c)
 		return (c - 32);
 	return (c);
 }
-
+/*
 #include <stdio.h>
 
 int ft_toupper(int c);
@@ -33,3 +34,4 @@ int main(void)
 }
 
 //gcc -Wall -Wextra -Werror ft_toupper.c -o test_toupper && ./test_toupper
+*/

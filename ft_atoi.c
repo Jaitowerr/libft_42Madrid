@@ -6,11 +6,11 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 15:04:24 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/22 16:16:12 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/26 13:37:42 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -38,7 +38,7 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sig * numb);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h> 
 
@@ -92,3 +92,5 @@ int main(void)
 }
 
 //  gcc -Wall -Wextra -Werror ft_atoi.c -o test_atoi && ./test_atoi
+
+*/

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *string)
 {
@@ -21,7 +21,7 @@ size_t	ft_strlen(const char *string)
 		length++;
 	return (length);
 }
-
+/*
 #include <stdio.h>
 
 int main() {
@@ -32,3 +32,4 @@ int main() {
 	
 	return 0;
 }
+*/

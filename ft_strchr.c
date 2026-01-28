@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	int	i;
@@ -25,7 +27,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
-
+/*
 #include <stdio.h>   // Para printf
 #include <string.h>
 //#include <stddef.h>  // Para size_t
@@ -60,3 +62,4 @@ int main(void)
 }
 
 //gcc -Wall -Wextra -Werror ft_strchr.c -o test_strchr && ./test_strchr
+*/

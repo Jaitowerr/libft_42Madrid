@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>   // Para printf
-#include <string.h>
-//#include <stddef.h>  // Para size_t
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -29,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
+/*
 int main(void)
 {
 	const char *str = "Hola mundo";
@@ -60,3 +58,4 @@ int main(void)
 }
 
 //  gcc -Wall -Wextra -Werror ft_strrchr.c -o test_strrchr && ./test_strrchr
+*/
