@@ -46,11 +46,11 @@ ft_memcpy       void    *ft_memcpy(void *dst, const void *src, size_t n)
 		n: Número de bytes a copiar.
 	Devuelve dst
 
-ft_memmove      void	*ft_memmove(void *dest, const void *src, size_t n)
-	Copia len bytes de la memoria de src a dst. La memoria pueden superponerse. Primero, los bytes en src se copian en una matriz temporal y luego en dst
+ft_memmove      void	*ft_memmove(void *str, const void *src, size_t n)
+	Copia len bytes de la memoria de src a str. La memoria pueden superponerse. Primero, los bytes en src se copian en una matriz temporal y luego en str
 		src = Es mi dato a leer y utilizar.
-		dest = desde dónde escribo.
-		Pueden apuntar al mismo bloque, pero a posiciones distintas dest + 2(empieza en posicion 2 a concatenar 'n' bytes de src)
+		str = desde dónde escribo.
+		Pueden apuntar al mismo bloque, pero a posiciones distintas str + 2(empieza en posicion 2 a concatenar 'n' bytes de src)
 
 ft_strlcpy      size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	Copia la cadena a la que apunta src, incluido el byte nulo de terminación ('\0'), al búfer señalado por dst.
