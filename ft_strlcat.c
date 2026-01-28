@@ -36,9 +36,12 @@ size_t	ft_strlcat(char	*dest, const char *src, size_t destsize)
 	return (d_len + s_len);
 }
 /*
-//medimos lago de dest hasta el nulo, o mientras no lleguemos al tamñao de destsize
+//medimos lago de dest hasta el nulo, o mientras no lleguemos al 
+tamñao de destsize
 //medimos src el largo
-//comprobamos si d_len es igual que destsize entonces devolvemos el destsize + el s_len, lo debería haber sido. Es responsabilidad del rpogramaod el destsize
+//comprobamos si d_len es igual que destsize entonces devolvemos 
+el destsize + el s_len, lo debería haber sido. 
+Es responsabilidad del rpogramaod el destsize
 
 #include <stdio.h>
 #include <stddef.h>

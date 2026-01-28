@@ -61,7 +61,8 @@ static	char	**res_memory(char **ptr2, const char *s, char c, size_t i_array)
 	}
 	return (ptr2);
 }
-static	void	date_array(char **ptr2, const char *s, char c, size_t i_array)
+
+static void	date_array(char **ptr2, const char *s, char c, size_t i_array)
 {
 	size_t	j;
 	size_t	i;

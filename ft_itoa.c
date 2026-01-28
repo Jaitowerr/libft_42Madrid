@@ -17,7 +17,7 @@ static int	size_word(long numb)
 	int	size;
 
 	size = 0;
-	while (numb > 9)   //si se puede dividir entra.
+	while (numb > 9)
 	{
 		numb = numb / 10;
 		size++;
@@ -33,7 +33,7 @@ static void	malloc_word_and_null(int size, char *word, int sig, long numb)
 
 	i = 0;
 	if (sig < 0)
-		word[i++] = '-';  //primera si es negativo el signo
+		word[i++] = '-';
 	while (numb > 9)
 	{
 		word[--size] = (numb % 10) + '0';
@@ -41,27 +41,27 @@ static void	malloc_word_and_null(int size, char *word, int sig, long numb)
 	}
 	if (numb >= 0 && numb <= 9)
 		word[--size] = numb + '0';
-
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char    *word;
-	long    numb;
-	int     size;
-	int     sig;
+	char	*word;
+	long	numb;
+	int		size;
+	int		sig;
 
 	sig = 0;
 	numb = n;
 	size = 0;
-	if( numb < 0)
+	if (numb < 0)
 	{
 		sig = -1;
 		numb = -numb;
 		size = size_word(numb) + 1;
-	} else
+	}
+	else
 		size = size_word(numb);
-	word = malloc(sizeof(char) * (size + 1));   //tamaño de word
+	word = malloc(sizeof(char) * (size + 1));
 	if (!word)
 		return (NULL);
 	word[size] = '\0';

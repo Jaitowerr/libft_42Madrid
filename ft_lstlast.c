@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 13:28:58 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/28 11:02:35 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:40:48 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstlast(t_list *lst)
 }
 /*
 #include <stdio.h>
- #ifdef TEST	//para saltar errores de compilación con la librería y compilar este main
+ #ifdef TEST
 
 int main(void)
 {
@@ -72,5 +72,6 @@ int main(void)
 	return 0;
 }
 #endif
-//cc -Wall -Wextra -Werror ft_lstlast.c ft_lstnew.c ft_lstadd_front.c -o test && ./test
+//cc -Wall -Wextra -Werror ft_lstlast.c ft_lstnew.c
+ft_lstadd_front.c -o test && ./test
 */

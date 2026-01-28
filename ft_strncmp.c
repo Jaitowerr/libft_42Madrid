@@ -61,7 +61,7 @@ int main(void)
 	// 3) caso clave: solo importan los primeros n
 	r1 = ft_strncmp("Holax", "Holay", 4);
 	r2 = strncmp("Holax", "Holay", 4);
-	printf("5) \"Holax\" vs \"Holay\" n=4 -> ft=%d | orig=%d (debe ser 0)\n", r1, r2);
+	printf("5) \"Holax\" vs \"Holay\" n=4 -> ft=%d | orig=%d (0)\n", r1, r2);
 
 	r1 = ft_strncmp("Holax", "Holay", 5);
 	r2 = strncmp("Holax", "Holay", 5);
@@ -79,7 +79,7 @@ int main(void)
 	// 5) n = 0 (siempre 0)
 	r1 = ft_strncmp("AAAA", "BBBB", 0);
 	r2 = strncmp("AAAA", "BBBB", 0);
-	printf("9) \"AAAA\" vs \"BBBB\" n=0 -> ft=%d | orig=%d (debe ser 0)\n", r1, r2);
+	printf("9) \"AAAA\" vs \"BBBB\" n=0 -> ft=%d | orig=%d (0)\n", r1, r2);
 
 	// 6) strings vacías / comparación con '\0' implícita
 	r1 = ft_strncmp("", "a", 1);

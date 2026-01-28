@@ -6,20 +6,11 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 15:58:30 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/26 13:47:10 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:00:32 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	contra_seña(unsigned int i, char b)
-{
-	if ( (b + i ) > 126)
-		b = b - i;
-	else
-		b = b + i;
-	return (b);
-}*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -42,6 +33,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 /*
+char	contra_seña(unsigned int i, char b)
+{
+	if ( (b + i ) > 126)
+		b = b - i;
+	else
+		b = b + i;
+	return (b);
+}
+
 int main()
 {
 	char *s = "aaaaaaaaaaaaaaaaaaaaa";

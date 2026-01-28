@@ -6,19 +6,19 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 13:48:38 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/28 15:52:23 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:02:07 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list  *temp_next;
-	t_list  *temp_lst;
-	
+	t_list	*temp_next;
+	t_list	*temp_lst;
+
 	if (!lst)
-		return;
+		return ;
 	temp_lst = *lst;
 	while (temp_lst)
 	{
@@ -70,5 +70,6 @@ int main(void)
 
 #endif
 
-// cc -Wall -Wextra -Werror -DTEST ft_lstclear.c ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_strdup.c ft_lstsize.c -o test && ./test
+// cc -Wall -Wextra -Werror -DTEST ft_lstclear.c ft_lstnew.c 
+ft_lstadd_front.c ft_lstadd_back.c ft_strdup.c ft_lstsize.c -o test && ./test
 */

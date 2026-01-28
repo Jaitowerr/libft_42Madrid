@@ -28,7 +28,10 @@ void	*ft_memset(void *ptr, int x, size_t len)
 }
 
 /*
-//Hacemos esa conversión (llamada casting) por una razón fundamental: void * no se puede usar para trabajar, así forzamos la conversión de este puntero a este tipo específico, no sirve solo con especificarlo en p, hay que hacerlo en ambos.
+//Hacemos esa conversión (llamada casting) por una razón fundamental:
+ void * no se puede usar para trabajar, así forzamos la conversión de 
+ este puntero a este tipo específico, no sirve solo con especificarlo en p,
+  hay que hacerlo en ambos.
 #include <stdio.h>
 
 int main()

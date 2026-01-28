@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 16:06:46 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/26 13:46:31 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:57:21 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ size_t	ft_strlcpy(char	*dest, const char	*src, size_t	destsize)
 }
 
 /*
-//destsize es el largo de dest, tiene que ir acorde sino da --> Buffer overflow. Segfault.
+//destsize es el largo de dest, tiene que ir acorde sino da -->
+ Buffer overflow. Segfault.
 
 
 int main(void)

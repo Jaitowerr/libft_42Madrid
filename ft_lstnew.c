@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 14:33:12 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/26 20:21:52 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:51:30 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstnew(void *content)
 	t_list	*new_node;
 
 	new_node = malloc(sizeof(t_list));
-	if(!new_node)
+	if (!new_node)
 		return (NULL);
 	new_node->content = content;
 	new_node->next = NULL;

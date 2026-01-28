@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 18:50:42 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/26 14:01:08 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:54:11 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int	main(void)
     return (0);
 }
 
-// cc -Wall -Wextra -Werror ft_putendl_fd.c -o test_ft_putendl_fd && ./test_ft_putendl_fd
+// cc -Wall -Wextra -Werror ft_putendl_fd.c -o test_ft_putendl_fd
+ && ./test_ft_putendl_fd
 */

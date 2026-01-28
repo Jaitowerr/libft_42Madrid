@@ -6,15 +6,15 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 12:16:44 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/27 13:40:15 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:59:49 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int     i;
+	int	i;
 
 	i = 0;
 	while (lst)
@@ -64,5 +64,6 @@ int main(void)
 	return 0;
 }
 #endif
-// cc -Wall -Wextra -Werror -DTEST ft_lstsize.c ft_lstnew.o ft_lstadd_front.c -o test && ./test
+// cc -Wall -Wextra -Werror -DTEST ft_lstsize.c ft_lstnew.o 
+ft_lstadd_front.c -o test && ./test
 */

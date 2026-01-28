@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 17:11:42 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/26 13:42:18 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:00:16 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ int main(void)
 	// 3) caso clave: solo importan los primeros n
 	r1 = ft_memcmp("Holax", "Holay", 4);
 	r2 = memcmp("Holax", "Holay", 4);
-	printf("5) \"Holax\" vs \"Holay\" n=4 -> ft=%d | orig=%d (debe ser 0)\n\n", r1, r2);
-
+	printf("5) \"Holax\" vs \"Holay\" n=4 -> ft=%d | orig=%d (0)\n\n", r1, r2);
+	
 	r1 = ft_memcmp("Holax", "Holay", 5);
 	r2 = memcmp("Holax", "Holay", 5);
 	printf("6) \"Holax\" vs \"Holay\" n=5 -> ft=%d | orig=%d\n\n", r1, r2);
@@ -83,7 +83,7 @@ int main(void)
 	// 5) n = 0 (siempre 0)
 	r1 = ft_memcmp("AAAA", "BBBB", 0);
 	r2 = memcmp("AAAA", "BBBB", 0);
-	printf("9) \"AAAA\" vs \"BBBB\" n=0 -> ft=%d | orig=%d (debe ser 0)\n\n", r1, r2);
+	printf("9) \"AAAA\" vs \"BBBB\" n=0 -> ft=%d | orig=%d (0)\n\n", r1, r2);
 
 	// 6) strings vacías / comparación con '\0' implícita
 	r1 = ft_memcmp("", "a", 1);

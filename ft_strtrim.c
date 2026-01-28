@@ -102,11 +102,3 @@ int main(void)
 
 //gcc -Wall -Wextra -Werror ft_strtrim.c -o test_strtrim && ./test_strtrim
 */
-
-
-
-
-
-
-
-

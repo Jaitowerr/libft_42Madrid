@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/26 18:40:04 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/27 12:38:10 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/28 19:50:36 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 		*lst = new;
 	}
 }
+
 /*
 #include <stdio.h>
 #ifdef TEST	//para saltar errores de compilación con la librería
@@ -35,7 +36,8 @@ int main(void)
 	n2 = ft_lstnew("Nodo 2");
 
 	ft_lstadd_front(&head, n1);		// Añades n1 al principio, head apunta a n1
-	ft_lstadd_front(&head, n2);		// Añades n2 al principio, head apunta a n2, y n2->next apunta a n1
+	ft_lstadd_front(&head, n2);		// Añades n2 al principio, head apunta a n2,
+										 y n2->next apunta a n1
 
 	// Imprimir contenidos usando while //
 	it = head;
@@ -52,5 +54,6 @@ int main(void)
 }
 #endif
 //cc -Wall -Wextra -Werror -DTEST ft_lstadd_front.c -o test && ./test
-//cc -Wall -Wextra -Werror -DTEST ft_lstadd_front.c ft_lstnew_local.c -o test && ./test
+//cc -Wall -Wextra -Werror -DTEST ft_lstadd_front.c ft_lstnew.c -o test && ./test
+
 */
