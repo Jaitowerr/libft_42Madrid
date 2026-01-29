@@ -62,72 +62,30 @@ Creación y Adición                          | Navegación y Tamaño           
 
 
 
-## Si quieres saber que realiza cada función, que parámetros utiliza cada una desliza a la zona inferior "Descripción".
+## Si quieres saber que realiza cada función, que parámetros utiliza cada una desliza a la zona inferior "Descripción" o haz click sobre el nombre d ela función de las tablas superiores..
 
 <br>
 
 # Instrucciones
 
-Una sección de "Instrucciones"que contenga cualquier información relevante sobre
-compilación, instalación y/o ejecución.
+Encontrarás un arcivo **Makefield**, este archivo es importante no borrarlo, dado que es quien maneja los comandos anteriores gestionando toda la librería. En esencia, un *makefile* sirve para autocompilar un proyecto en lugar de hacerlo manualmente.
 
+Para compilar esta librería y conseguir el archivo .a, puedes utilizar los siguientes comandos desde la consola:
+* make     		--> Compila todo
+* make clean  	--> Borra objetos
+* make fclean 	--> Borra objetos y librería .a
+* make re     	--> Limpia y recompila de nuevo
 
-
-
-
-
-## Compilación
-```
-make
-```
-### ¿Que es [Makefile](/Makefile) y como hacerlo?
-#### ¿Que es [Makefile](/Makefile) y como hacerlo?
-##### ¿Que es [Makefile](/Makefile) y como hacerlo?
-
-Un archivo del tipo *makefile* es un archivo que hace uso de la utilidad `make`. Esta utilidad determina que partes de un programa deben de compilarse, y les manda comandos para hacerlo. En esencia, un *makefile* sirve para autocompilar un proyecto en lugar de hacerlo manualmente.
-
-Para poder hacer uso de `make`, en primer lugar debe crearse un archivo del tipo *makefile*. Para ello basta con crear uno con nombre "Makefile".
-
-
----
-
-
-Otros comandos:
-```
-make clean        # Elimina archivos .o
-make fclean       # Elimina .o y libft.a
-make re           # Limpia y recompila todo
-```
-
-## Uso
-```
-#include "libft.h"
-```
-
-gcc tu_codigo.c -L. -lft
-
----
-
-# Descripción de la librería
-### Lista de funcciones
-
-<br>
 
 
 
 # Recursos
 
- Una sección de "Recursos"que enumere referencias clásicas relacionadas con el
-tema (documentación, artículos, tutoriales, etc.), así como una descripción del uso
-de IA, especificando para qué tareas y en qué partes del proyecto se ha utilizado.
+Esta lista de funciones a parte del uso de la librería man para ciertas funciones, se ha utilizado la ayuda de compañeros, a parte, se han utilizado recursos externos como páginas de https://pythontutor.com/render.html# para ver como se mueve el código dentro de las funciones y partes de peor comprensión, se ha utilizado la propia consola para compilar y también páginas como https://www.programiz.com/c-programming/online-compiler/ que permite compilar al momento y hacer cambios rápidos.
+El uso de la IA ha sido para comprender fallos de comprensión en el funcionamiento de ciertas funciones que por mas búsquedas en internet o la explicación de compañeros no he sido capaz de captar. También tras no encontrar el error tras pelearse con el código le he pedido ayuda para ver donde falla, y sobre todo sin pedir el código, por qué falla mi código, a la vez de hemos pedido ciertas pruebas que colocar en lso main para probarlas en caso extremo. Aun así al pasar el programa Paco que contiene varios test, hemos visto varios fallos que hemos solucionado antes de entregar el proyecto.
 
 
-Manual POSIX
-ASCII Table
-cplusplus reference
-
-# Uso de IA
-
+-------------------------------------------------------------------------
 
 # [#Descripción] de la librería, función por función:
 
@@ -136,7 +94,6 @@ cplusplus reference
 Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es. <br>
 Da igual mayúsculas que minúsculas. <br>
 Puede recibir un char porque lo transforma a int según la tabla ASCII. <br>
-
 
 
 ### [ft_isdigit](/ft_isdigit.c)
@@ -286,7 +243,7 @@ Reserva memoria (con malloc(3)) y devuelve una subcadena de caracteres de la cad
 	La subcadena de caracteres resultante. NULL si falla la reserva de memoria.
 
 
-test2
+PARTE 2
 
 ### [ft_substr](/ft_substr.c) ft_substr
     char *ft_substr(char const *s, unsigned int start, size_t len);
