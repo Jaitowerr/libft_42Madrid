@@ -32,7 +32,7 @@ Funciones de clasificación de caracteres    | Funciones de manipulación de mem
 [ft_tolower](#ft_tolower)	                  |                                             | [ft_strnstr](#ft_strnstr)                   | 
 [ft_tolower](#ft_tolower)	                  |                                             | [ft_strdup](#ft_strdup)                     | 
 
----
+
 
 PARTE 2
 
@@ -44,25 +44,25 @@ Manipulación de String                      | Conversion y memoria             
 [ft_strtrim](#ft_strtrim)	                  |                                          | [ft_putendl_fd](#ft_putendl_fd)
  [ft_strmapi](#ft_strmapi)                  |                                          | [ft_putnbr_fd](#ft_putnbr_fd)
 [ft_striteri](#ft_striteri)                 |                                          | 
-                                            |                                          |
 
 
 
----
+
 
 PARTE 3
 
 Estas funciones utilizan la estructura t_list. Son fundamentales para aprender a gestionar memoria dinámica y punteros de forma avanzada.
 Creación y Adición                          | Navegación y Tamaño                      | Borrado y Modificación
 :-----------:                               | :-----------:                            | :-----------:
-[ft_lstnew](#ft_lstnew)		                   |[ft_lstsize](#ft_lstsize)                 | [ft_lstdelone](#ft_lstdelone)
-[ft_lstadd_front](#ft_lstadd_front)		       |[ft_lstlast](#ft_lstlast)                 | [ft_lstclear](#ft_lstclear)
-[ft_lstadd_back](#ft_lstadd_back)	          |                                          | [ft_lstiter](#ft_lstiter)
-                                            |                                          | [ft_lstmap](#ft_lstmap)
-                                            |                                          | 
-                                            |                                          |
+[ft_lstnew](#ft_lstnew)		                |[ft_lstsize](#ft_lstsize)                 | [ft_lstdelone](#ft_lstdelone)
+[ft_lstadd_front](#ft_lstadd_front)		    |[ft_lstlast](#ft_lstlast)                 | [ft_lstclear](#ft_lstclear)
+[ft_lstadd_back](#ft_lstadd_back)	        |                                          | [ft_lstiter](#ft_lstiter)
+ |	 ||	 [ft_lstmap](#ft_lstmap)
 
-## Si quieres saber que realiza cada función, que parámetros utiliza cada una, [pincha aquí](#pincha_aquí) o desliza a la zona inferior.
+
+
+
+## Si quieres saber que realiza cada función, que parámetros utiliza cada una desliza a la zona inferior "Descripción".
 
 <br>
 
@@ -129,7 +129,7 @@ cplusplus reference
 # Uso de IA
 
 
-# Descripción de la librería, función por función:
+# [#Descripción] de la librería, función por función:
 
 ### [ft_isalpha](/ft_isalpha.c) 
     int ft_isalpha(int c)
