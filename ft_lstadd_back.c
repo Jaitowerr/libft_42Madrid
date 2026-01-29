@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 13:56:40 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/29 02:01:11 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/29 15:16:31 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 static t_list	*ft_lstlast_local(t_list *lst)
 {
-	if (!lst)
-		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
@@ -30,12 +28,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (*lst == NULL)
 	{
 		*lst = new;
-		new->next = NULL;
 		return ;
 	}
-	last = ft_lstlast_local(*lst);
+	last = *lst;
+	last = ft_lstlast_local(last);
 	last->next = new;
-	new->next = NULL;
 }
 /*
 #ifdef TEST

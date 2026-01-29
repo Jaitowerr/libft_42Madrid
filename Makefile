@@ -6,7 +6,7 @@
 #    By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/26 12:17:33 by aitorres          #+#    #+#              #
-#    Updated: 2026/01/28 16:39:38 by aitorres         ###   ########.fr        #
+#    Updated: 2026/01/29 15:30:49 by aitorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,8 @@ SRC		=	ft_atoi.c\
 			ft_striteri.c\
 			ft_substr.c\
 			ft_tolower.c\
-			ft_toupper.c
-
-SRB		=	ft_lstnew.c \
+			ft_toupper.c\
+			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -58,7 +57,6 @@ SRB		=	ft_lstnew.c \
 			ft_lstmap.c
 
 OBJ		=	$(SRC:.c=.o)
-OBB		=	$(SRB:.c=.o)
 
 AR		=	ar rcs
 CC		=	cc
@@ -66,7 +64,7 @@ FLAGS	=	-Wall -Werror -Wextra
 
 all:		$(NAME)	#crea la librería con todos los objetos (incluyendo listas)
 
-$(NAME):	$(OBJ)	$(OBB)
+$(NAME):	$(OBJ)
 			@$(AR) $(NAME) $(OBJ)
 			@echo "$(NAME) creado."
 
@@ -74,20 +72,14 @@ $(NAME):	$(OBJ)	$(OBB)
 			@$(CC) $(FLAGS) -c $< -o $@
 
 clean:		
-			@rm -f $(OBJ) $(OBB)
+			@rm -f $(OBJ)
 			@echo "Objetos eliminados."
 			
 fclean:		clean
 			@rm -f $(NAME)
-			@echo "Objeto y librería eliminado."
+			@echo "Librería eliminada."
 
 re:			fclean	all	#recompila desde cero
-
-bonus:		$(OBB)
-			@$(AR) $(NAME) $(OBB)
-#*main:		$(OBJ) $(OBB)
-#			@$(CC) $(FLAGS) $(OBJ) $(OBB) main.c
-#			./a.out
 
 # make        # Compila todo
 # make clean  # Borra objetos

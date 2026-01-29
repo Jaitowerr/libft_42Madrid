@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:41:32 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/29 02:17:37 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/29 14:55:10 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	i = 0;
 	if (!little || len_little == 0)
 		return ((char *)big);
-	if (!big || len == 0 || len_little > len)
+	if (len == 0)
 		return (NULL);
 	while (big[i] != '\0' && i + len_little <= len)
 	{

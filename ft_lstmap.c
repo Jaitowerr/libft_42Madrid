@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:58:42 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/29 02:02:49 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/29 15:18:33 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,11 @@ static void	ft_lstadd_back_local(t_list **lst, t_list *new)
 	if (*lst == NULL)
 	{
 		*lst = new;
-		new->next = NULL;
 		return ;
 	}
-	last = ft_lstlast_local(*lst);
+	last = *lst;
+	last = ft_lstlast_local(last);
 	last->next = new;
-	new->next = NULL;
 }
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
