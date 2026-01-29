@@ -12,10 +12,10 @@ Este proyecto sirve como base para todos los futuros proyectos de 42, permitiend
 * Implementación de funciones de bajo nivel
 
 La librería generada es libft.a, que puede enlazarse en cualquier proyecto en C.
-
+<br><br><br>
 ## Lista de funcciones
 
-<br>
+<br><br>
 PARTE 1
 
 Estas funciones son réplicas de la librería estándar de C (libc).
@@ -32,7 +32,7 @@ Funciones de clasificación de caracteres    | Funciones de manipulación de mem
 [ft_tolower](#ft_tolower)	                  |                                             | [ft_strdup](#ft_strdup)                     | 
 
 
-<br>
+<br><br>
 PARTE 2
 
 Estas funciones no pertenecen a la librería estándar de C o están modificadas. Se centran principalmente en la manipulación avanzada de strings y la salida de datos por descriptores de archivo (file descriptors).
@@ -47,7 +47,7 @@ Manipulación de String                      | Conversion y memoria             
 
 
 
-<br>
+<br><br>
 PARTE 3
 
 Estas funciones utilizan la estructura t_list. Son fundamentales para aprender a gestionar memoria dinámica y punteros de forma avanzada.
@@ -63,7 +63,7 @@ Creación y Adición                          | Navegación y Tamaño           
 
 ### Si quieres saber que realiza cada función, que parámetros utiliza cada una desliza a la zona inferior "Descripción" o haz click sobre el nombre d ela función de las tablas superiores..
 
-<br><br>
+<br><br><br>
 
 # Instrucciones
 
@@ -83,15 +83,14 @@ Sustituye las xxxx por el nombre d ela función, es posible que te toque protege
 
 	cc -Wall -Wextra -Werror -DTEST ft_xxxx.c ft_xxxxxx.c -o test_xxxx && ./test_xxxx
 
-<br><br>
+<br><br><br>
 
 # Recursos
 
 Esta lista de funciones a parte del uso de la librería man para ciertas funciones, se ha utilizado la ayuda de compañeros, a parte, se han utilizado recursos externos como páginas de https://pythontutor.com/render.html# para ver como se mueve el código dentro de las funciones y partes de peor comprensión, se ha utilizado la propia consola para compilar y también páginas como https://www.programiz.com/c-programming/online-compiler/ que permite compilar al momento y hacer cambios rápidos.
 El uso de la IA ha sido para comprender fallos de comprensión en el funcionamiento de ciertas funciones que por mas búsquedas en internet o la explicación de compañeros no he sido capaz de captar. También tras no encontrar el error tras pelearse con el código le he pedido ayuda para ver donde falla, y sobre todo sin pedir el código, por qué falla mi código, a la vez de hemos pedido ciertas pruebas que colocar en lso main para probarlas en caso extremo. Aun así al pasar el programa Paco que contiene varios test, hemos visto varios fallos que hemos solucionado antes de entregar el proyecto.
 
-<br><hr>
--------------------------------------------------------------------------
+<br><br><hr>
 <br><br><br>
 
 ## Descripción de la librería, función por función:
