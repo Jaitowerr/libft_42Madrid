@@ -62,7 +62,7 @@ Creación y Adición                          | Navegación y Tamaño           
                                             |                                          | 
                                             |                                          |
 
-## Si quieres saber que realiza cada función, que parámetros utiliza cada una, pincha aquí o desliza a la zona inferior.
+## Si quieres saber que realiza cada función, que parámetros utiliza cada una, [pincha aquí](#pincha_aquí) o desliza a la zona inferior.
 
 <br>
 
@@ -437,7 +437,7 @@ Recorre una lista enlazada nodo por nodo mientras haya nodos (lst != NULL), y ap
 	Avanza al siguiente nodo con lst = lst->next
 
 
-### [ft_lstmap(](/ft_lstmap(.c)
+### [ft_lstmap(](/ft_lstmap.c)
     t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
 Crea una nueva lista aplicando una función a cada nodo de la lista original.
 		- lst: Puntero al primer nodo de la lista original.
