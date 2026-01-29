@@ -6,7 +6,7 @@
 #    By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/26 12:17:33 by aitorres          #+#    #+#              #
-#    Updated: 2026/01/29 15:30:49 by aitorres         ###   ########.fr        #
+#    Updated: 2026/01/29 17:34:54 by aitorres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,8 @@ fclean:		clean
 			@echo "Librería eliminada."
 
 re:			fclean	all	#recompila desde cero
+
+# bonus: $(NAME)
 
 # make        # Compila todo
 # make clean  # Borra objetos
