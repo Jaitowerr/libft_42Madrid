@@ -90,16 +90,18 @@ Sustituye las xxxx por el nombre d ela función, es posible que te toque protege
 Esta lista de funciones a parte del uso de la librería man para ciertas funciones, se ha utilizado la ayuda de compañeros, a parte, se han utilizado recursos externos como páginas de https://pythontutor.com/render.html# para ver como se mueve el código dentro de las funciones y partes de peor comprensión, se ha utilizado la propia consola para compilar y también páginas como https://www.programiz.com/c-programming/online-compiler/ que permite compilar al momento y hacer cambios rápidos.
 El uso de la IA ha sido para comprender fallos de comprensión en el funcionamiento de ciertas funciones que por mas búsquedas en internet o la explicación de compañeros no he sido capaz de captar. También tras no encontrar el error tras pelearse con el código le he pedido ayuda para ver donde falla, y sobre todo sin pedir el código, por qué falla mi código, a la vez de hemos pedido ciertas pruebas que colocar en lso main para probarlas en caso extremo. Aun así al pasar el programa Paco que contiene varios test, hemos visto varios fallos que hemos solucionado antes de entregar el proyecto.
 
-
+<br>
 -------------------------------------------------------------------------
+<br><br><br>
 
 ## Descripción de la librería, función por función:
+<br>
 
 ### [ft_isalpha](/ft_isalpha.c) 
     int ft_isalpha(int c)
-Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es. <br>
-Da igual mayúsculas que minúsculas. <br>
-Puede recibir un char porque lo transforma a int según la tabla ASCII. <br>
+Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es.
+Da igual mayúsculas que minúsculas.
+Puede recibir un char porque lo transforma a int según la tabla ASCII.
 <br>
 ### [ft_isdigit](/ft_isdigit.c)
     int ft_isdigit(int c)
