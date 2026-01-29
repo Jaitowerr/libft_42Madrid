@@ -145,7 +145,7 @@ ft_strjoin      char *ft_strjoin(char const *s1, char const *s2);
 
 
 ft_strtrim      char *ft_strtrim(char const *s1, char const *set);
-	Elimina todos los caracteres de la cadena set desde el principio y el final de s1.
+	Elimina todos los caracteres set de la cadena desde el principio y el final de s1.
 	Devuelve una nueva cadena (con malloc) con los caracteres indeseados recortados.
 	Busca el primer carácter de s1 que no esté en set (inicio), luego busca el último carácter de s1 que no esté en set (final), y copia solo esa porción en una nueva cadena y la devuelve.
 	Si s1 está completamente formada por caracteres de set, devuelve una cadena vacía ("").

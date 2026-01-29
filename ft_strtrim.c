@@ -45,15 +45,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	ini;
 	int		i;
 
-	fin = ft_strlen_local(s1) - 1;
+	if (!s1 || !set)
+		return (NULL);
 	ini = 0;
-	i = 0;
 	while (s1[ini] && ft_strrchr_local(set, s1[ini]) != NULL)
 		ini++;
+	fin = ft_strlen_local(s1);
+	if (ini == fin)
+		return (ft_strdup(""));
+	fin--;
 	while (s1[fin] && ft_strrchr_local(set, s1[fin]) != NULL)
 		fin--;
-	if (fin - ini > 0)
-		i = fin - ini + 1;
+	i = fin - ini + 1;
 	s2 = malloc(sizeof(char) * (i + 1));
 	if (!s2)
 		return (NULL);
