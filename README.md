@@ -101,19 +101,19 @@ El uso de la IA ha sido para comprender fallos de comprensión en el funcionamie
 Comprueba si c es un carácter alfabético, devuelve 1 si lo es o 0 si no lo es.
 Da igual mayúsculas que minúsculas.
 Puede recibir un char porque lo transforma a int según la tabla ASCII.
-<br>
+<br><br>
 ### [ft_isdigit](/ft_isdigit.c)
     int ft_isdigit(int c)
 Comprueba si c es un carácter numérico, devuelve 1 si lo es o 0 si no lo es. Puede recibir un char porque lo transforma a int según la tabla Ascii, sino, introducir el número correspondiento según Ascii, entre 48 siendo 0 y 57 siendo el 9.
-<br>
+<br><br>
 ### [ft_isalnum](/ft_isalnum.c)
     int	ft_isalnum(int c)
 Comprueba si c es alfanumérico, devuelve 1 si lo es y 0 si no es.  Puede recibir un char porque lo transforma a int según la tabla Ascii, sino, introducir el número correspondiento según Ascii.
-<br>
+<br><br>
 ### [ft_isascii](/ft_isascii.c)
     int	ft_isascii(int c)
 Comprueba si c es un carácter ASCII, devuelve 1 si lo es y 0 si no es. Un caracter de la tablas ASCII es cualquiera entre 0 y 127, ambos incluidos. Puede recibir un char porque lo transforma a int según la tabla Ascii, sino, introducir el número correspondiento según Ascii.
-<br>
+<br><br>
 ### [ft_isprint](/ft_isprint.c)
     int	ft_isprint(int c)
 Comprueba si c es un carácter imprimible según ASCII, devuelve 1 si lo es y 0 si no es. Un caracter IMPRIMIBLE de la tabla ASCII es cualquiera entre 32 y 127, ambos incluidos. Puede recibir un char porque lo transforma a int según la tabla Ascii, sino, introducir el número correspondiento según Ascii.
