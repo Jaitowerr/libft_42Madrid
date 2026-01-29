@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/28 15:58:42 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/28 19:44:39 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/29 01:01:20 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		node = ft_lstnew_local(temp_content);
 		if (!node)
 		{
-			del(temp_content);
+			if (del && temp_content)
+				del(temp_content);
 			ft_lstclear_local(&new_list, del);
+			return (NULL);
 		}
 		ft_lstadd_back_local(&new_list, node);
 		lst = lst->next;
@@ -98,14 +100,14 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 #include <stdio.h>
 
 
-static void *duplicate_string(void *content)
+void *duplicate_string(void *content)
 {
 	if (!content)
 		return (NULL);
 	return (ft_strdup((char *)content));  // strdup usa malloc internamente
 }
 
-static void del_content(void *content)
+void del_content(void *content)
 {
 	free(content);
 }

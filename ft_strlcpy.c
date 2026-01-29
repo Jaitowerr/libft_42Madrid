@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 16:06:46 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/28 19:57:21 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/29 00:38:47 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char	*dest, const char	*src, size_t	destsize)
 	if (destsize == 0)
 		return (len);
 	i = 0;
-	while (i < (destsize - 1) && src[i] != '\n')
+	while (i < (destsize - 1) && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;

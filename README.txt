@@ -47,9 +47,10 @@ ft_memcpy       void    *ft_memcpy(void *dst, const void *src, size_t n)
 	Devuelve dst
 
 ft_memmove      void	*ft_memmove(void *str, const void *src, size_t n)
-	Copia len bytes de la memoria de src a str. La memoria pueden superponerse. Primero, los bytes en src se copian en una matriz temporal y luego en str
-		src = Es mi dato a leer y utilizar.
-		str = desde dónde escribo.
+	Copiar n bytes desde la dirección src a la dirección dest, , manejando correctamente el caso en que las áreas de memoria se solapen
+	Trata la memoria como unsigned char para copiar byte a byte.
+			src = Es mi dato a leer y utilizar.
+			str = desde dónde escribo.
 		Pueden apuntar al mismo bloque, pero a posiciones distintas str + 2(empieza en posicion 2 a concatenar 'n' bytes de src)
 
 ft_strlcpy      size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -167,8 +168,10 @@ ft_itoa     char *ft_itoa(int n);
 Retorna un char *.
 
 ft_strmapi		char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-	strmapi gestiona una función dentro de otra función. y devulve un nuevo puntero.Aplica la función ‘f’ a cada carácter de la cadena ‘s’, pasando su índice como primer argumento y el propio carácter como segundo argumento. Se crea una nueva cadena (utilizando malloc(3)) para almacenar los resultados de las sucesivas aplicaciones de ‘f’.
-Debe devolver el puntero creado.
+	strmapi gestiona una función dentro de otra función. y devulve un nuevo puntero.
+	Aplica la función ‘f’ a cada carácter de la cadena ‘s’, pasando su índice como primer argumento y el propio carácter como segundo argumento. 
+	Se crea una nueva cadena (utilizando malloc(3)) para almacenar los resultados de las sucesivas aplicaciones de ‘f’.
+	Debe devolver el puntero creado.
 
 ft_striteri		void ft_striteri(char *s, void (*f)(unsigned int, char*));
 	muy parecido a strmapi, pero en este caso en vez de enviar el char, y agregarlo a una segunda cadena lo modifiquemos o no, en este caso enviamos la direccion de &s[i] iteramos directamente sobre la cadena y la modificamos directamente, no retornamos nada. 

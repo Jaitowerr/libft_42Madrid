@@ -6,7 +6,7 @@
 /*   By: aitorres <aitorres@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 15:58:30 by aitorres          #+#    #+#             */
-/*   Updated: 2026/01/28 20:00:32 by aitorres         ###   ########.fr       */
+/*   Updated: 2026/01/29 00:51:42 by aitorres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		s2[i] = f(i, s[i]);
 		i++;
 	}
+	s2[i] = '\0';
 	return (s2);
 }
 
