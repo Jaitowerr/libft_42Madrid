@@ -100,7 +100,7 @@ ft_memcmp       int memcmp(const void *s1, const void *s2, size_t n)
 	Devuelve -1 si la resta es negativa, 0 si es igual todo, y 1 si es positivo.
 
 ft_strnstr		char	*ft_strnstr(const char *big, const char *little, size_t len)
-	 Es un buscador, busca dentro de big la primera aparición de una subcadena (little), pero limitando la búsqueda a un número máximo de caracteres (n) ?
+	 Es un buscador, busca dentro de big la primera aparición de una subcadena (little), pero limitando la búsqueda a un número máximo de caracteres (len) ?
 	 si little está vacía, devuelve big.
 	 Si little está despues de 'len' en 'Big', pilla a medias de la posicion 'len' o no se completa devuelve NULL.
 	 Si no se encuentra little, devuelve 'NULL'.
